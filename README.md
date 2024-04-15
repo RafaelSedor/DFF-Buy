@@ -1,4 +1,4 @@
-# BUY
+# Shopping-list
 
 Este projeto tem como objetivo a aprendizagem sobre front-end com frameworks, criando uma plataforma de lista de compras com registro do produto, histórico, preços, datas e previsões de futuras compras. 
 
