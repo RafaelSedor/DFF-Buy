@@ -1,12 +1,19 @@
-<header class="header">
-    <nav>
-        <div class="nav-wrapper">
-            <a href="" class="brand-logo">Shopping List</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="Comprar"><a href="/purchase">Lista de compras</a></li>
-                <li class="Comprado"><a href="/purchased">Comprado</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-<app-main-purchased></app-main-purchased>
+<div>
+    <h1 class="text-lg font-bold uppercase text-center">Comprados</h1>
+    <div class="flex justify-between flex-col sm:flex-row">
+        <input
+                type="text"
+                class="input input-bordered"
+                placeholder="Pesquisar"
+                [(ngModel)]="search"
+                (input)="onSearchChange()"
+        >
+    </div>
+    <app-spinner *ngIf="loading"/>
+    <app-purchased-table
+            *ngIf="!loading"
+            [items]="data"
+            (show)="showItem($event)"
+            (delete)="deleteItem($event)"
+    />
+</div>

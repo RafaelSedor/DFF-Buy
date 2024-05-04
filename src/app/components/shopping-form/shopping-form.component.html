@@ -1,0 +1,82 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()" class="w-full lg:w-1/2 m-auto">
+  <div class="grid lg:grid-cols-2 gap-2">
+    <label>
+      <p class="text-sm">Nome</p>
+      <input
+        [(ngModel)]="item.Name"
+        type="text"
+        name="name"
+        class="input input-bordered w-full"
+        placeholder="Nome"
+        #name="ngModel"
+        required
+      >
+      <div
+        *ngIf="name.invalid && (name.dirty || name.touched)"
+        class="text-error text-sm mt-1"
+      >
+        Nome é obrigatório.
+      </div>
+    </label>
+    <label>
+      <p class="text-sm">Marca</p>
+      <input
+        [(ngModel)]="item.Brand"
+        type="text"
+        name="brand"
+        class="input input-bordered w-full"
+        placeholder="Brand"
+        #brand="ngModel"
+        required
+      >
+      <div
+        *ngIf="brand.invalid && (brand.dirty || brand.touched)"
+        class="text-error text-sm mt-1"
+      >
+        Marca é obrigatório.
+      </div>
+    </label>
+    <label>
+      <p class="text-sm">Quantidade</p>
+      <input
+        [(ngModel)]="item.Amount"
+        type="number"
+        name="amount"
+        class="input input-bordered w-full"
+        placeholder="amount"
+        #amount="ngModel"
+        required
+      >
+      <div
+        *ngIf="amount.invalid && (amount.dirty || amount.touched)"
+        class="text-error text-sm mt-1"
+      >
+        Marca é obrigatório.
+      </div>
+    </label>
+    <label>
+      <p class="text-sm">Data</p>
+      <input
+        [(ngModel)]="item.Date"
+        type="date"
+        name="date"
+        class="input input-bordered w-full"
+        placeholder="Data"
+        #date="ngModel"
+        required
+      >
+      <div
+        *ngIf="date.invalid && (date.dirty || date.touched)"
+        class="text-error text-sm mt-1"
+      >
+        Data é obrigatória.
+      </div>
+    </label>
+  </div>
+  <div class="flex justify-between mt-4">
+    <a routerLink="">
+      <button class="btn btn-outline btn-error">Cancelar</button>
+    </a>
+    <button class="btn btn-primary" [disabled]="form.invalid">Salvar</button>
+  </div>
+</form>

@@ -1,12 +1,33 @@
-<header class="header">
-    <nav>
-        <div class="nav-wrapper">
-            <a href="" class="brand-logo">Shopping List</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="Comprar"><a href="/purchase">Lista de compras</a></li>
-                <li class="Comprado"><a href="/purchased">Comprado</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-<app-main-purchase></app-main-purchase>
+<div>
+    <h1 class="text-lg font-bold uppercase text-center">Lista de Compras</h1>
+    <div class="flex justify-between flex-col sm:flex-row">
+      <input
+        type="text"
+        class="input input-bordered"
+        placeholder="Pesquisar"
+        [(ngModel)]="search"
+        (input)="onSearchChange()"
+      >
+      <a routerLink="shopping/create">
+        <button class="btn btn-primary w-full">Adicionar</button>
+      </a>
+    </div>
+    <app-spinner *ngIf="loading"/>
+    <app-shopping-table
+      *ngIf="!loading"
+      [products]="data"
+      (show)="showItem($event)"
+      (edit)="editItem($event)"
+      (check)="checkItem($event)"
+      (delete)="deleteItem($event)"
+    />
+    <div class="text-right mt-8">
+      <a routerLink="contact">
+        <button class="btn btn-primary btn-xs">Contato</button>
+      </a>
+      <div class="py-4">
+        <router-outlet/>
+      </div>
+    </div>
+  </div>
+  

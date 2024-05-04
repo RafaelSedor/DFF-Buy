@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {LayoutService} from "../../services/layout.service";
 
 @Component({
   selector: 'app-footer',
-  standalone: true,
-  imports: [],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+  constructor(private layoutService: LayoutService) {
+  }
 
+  onClickButton() {
+    this.layoutService.simpleEmitter.emit('Teste de log')
+  }
 }
