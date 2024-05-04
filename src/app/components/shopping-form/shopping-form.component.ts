@@ -10,7 +10,7 @@ export class ShoppingFormComponent {
   @Input() item: Products = {
     Name: '',
     Brand: '',
-    Amount: 0,
+    Amount: '',
     Date: ''
   }
   @Output() submit = new EventEmitter<Products>()
@@ -18,7 +18,7 @@ export class ShoppingFormComponent {
   model: Products = {
     Name: '',
     Brand: '',
-    Amount: 0,
+    Amount: '',
     Date: ''
   }
 
