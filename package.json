@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href=/DFF-Shopping-list/",
+    "build": "ng build --base-href=/DFF-Shopping-list/ --source-map",
     "ghpages": "angular-cli-ghpages --dir=dist/DFF-Shopping-list",
     "deploy": "npm run build & npm run ghpages",
     "watch": "ng build --watch --configuration development",
