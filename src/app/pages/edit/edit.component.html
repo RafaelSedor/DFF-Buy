@@ -1,6 +1,0 @@
-<div *ngIf="isDataLoaded">
-    <h1 class="text-2xl text-center font-bold mb-8">Editar desejo</h1>
-    <app-shopping-form [item]="data" (submit)="onSubmit($event)"></app-shopping-form>
-  </div>
-  <app-spinner *ngIf="!isDataLoaded" />
-  
