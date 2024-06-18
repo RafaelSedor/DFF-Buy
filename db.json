@@ -1,0 +1,52 @@
+{
+    "Products": [
+        {
+            "Name": "Arroz",
+            "Brand": "Urbano",
+            "Amount": 1,
+            "Date": "15/04/2024",
+            "Purchase": false,
+            "id": "1"
+        },
+        {
+            "Name": "Arroz",
+            "Brand": "Urbano",
+            "Amount": 1,
+            "Date": "15/04/2024",
+            "Purchase": false,
+            "id": "1"
+        },
+        {
+            "Name": "Feijão",
+            "Brand": "Camil",
+            "Amount": 2,
+            "Date": "17/04/2024",
+            "Purchase": true,
+            "id": "2"
+        },
+        {
+            "Name": "Macarrão",
+            "Brand": "Adria",
+            "Amount": 1,
+            "Date": "18/04/2024",
+            "Purchase": false,
+            "id": "3"
+        },
+        {
+            "Name": "Óleo de Soja",
+            "Brand": "Liza",
+            "Amount": 1,
+            "Date": "20/04/2024",
+            "Purchase": true,
+            "id": "4"
+        },
+        {
+            "Name": "Sal",
+            "Brand": "Cisne",
+            "Amount": 1,
+            "Date": "21/04/2024",
+            "Purchase": false,
+            "id": "5"
+        }     
+    ]
+}
