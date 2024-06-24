@@ -14,6 +14,10 @@ https://rafaelsedor.github.io/DFF-Shopping-list/
 
 https://www.figma.com/proto/zxvSPCILm122sEB4SQA5pS/Shopping-list?page-id=0%3A1&type=design&node-id=1-69&viewport=470%2C601%2C0.6&t=Ww8RP8Afc85JxEsL-1&scaling=min-zoom&starting-point-node-id=1%3A48&mode=design
 
+## Apresentação Assíncrona
+
+https://youtu.be/mmiJWBoYUlg
+
 ## Checklist
 #### RA1 - Prototipar e projetar interfaces gráficas de usuário, considerando princípios de usabilidade e experiência do usuário.
 - [X] ID1: O aluno desenvolveu protótipos de interfaces que demonstram compreensão das diretrizes de usabilidade.

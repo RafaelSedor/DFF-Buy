@@ -16,7 +16,7 @@ export class EditComponent {
   data!: Products;
   isDataLoaded: boolean = false;
 
-  constructor(private route: ActivatedRoute, private router: Router, private wishService: ProductsService, location: Location) {
+  constructor(private route: ActivatedRoute, private router: Router, private productService: ProductsService, location: Location) {
     this.id = this.route.snapshot.paramMap.get('id')
     this.location = location
     this.router = router
@@ -27,7 +27,7 @@ export class EditComponent {
   }
 
   async fetchItem() {
-    (await this.wishService.getProduct(this.id))
+    (await this.productService.getProduct(this.id))
       .subscribe((shopping: Products) => {
         this.data = shopping
         this.isDataLoaded = true;
@@ -38,7 +38,7 @@ export class EditComponent {
     if (!form.id) {
       return
     }
-    (await this.wishService.editProducts(form.id, {...form, Status: false})).subscribe({
+    (await this.productService.editProducts(form.id, {...form, Status: false})).subscribe({
       next: () => this.router.navigate(['']),
       error: (e) => console.error('Erro ao editar desejo:', e)
     });
